@@ -1,0 +1,13 @@
+version: '3'
+services:
+  api_animais:
+    image: imagem_api_animais
+    ports:
+      - "5000:5000"
+    restart: always
+    environment:
+      DEBUG: ${DEBUG}
+      DB_NAME: ${DB_NAME}
+      SECRET_KEY: ${SECRET_KEY}
+    command: >
+      sh -c "python CriandoBanco.py && python app.py"
