@@ -15,4 +15,4 @@ from src.rotas.animal import animal_bp
 app.register_blueprint(animal_bp)
 
 if __name__ == "__main__":
-	app.run()
+	app.run(host="0.0.0.0")
